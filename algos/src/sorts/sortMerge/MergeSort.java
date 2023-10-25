@@ -1,4 +1,4 @@
-package sortMerge;
+package sorts.sortMerge;
 
 public class MergeSort {
     public static void main(String[] args) {
@@ -47,6 +47,8 @@ public class MergeSort {
 
 //        Merging arrays back
         merge(leftArray, rightArray, array);
+//        Note - 'merge()' will be called after each 'mergeSort()' since it's a part of 'mergeSort()'
+//        Thus, arrays will be merged recursively
     }
 
     private static void merge(int[] leftArray, int[] rightArray, int[] array) {
