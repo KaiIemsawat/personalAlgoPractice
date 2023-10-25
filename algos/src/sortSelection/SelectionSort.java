@@ -7,12 +7,12 @@ public class SelectionSort {
 //        small data set = ok
 //        large data set = BAD
 
-        int array[] = {2,5,7,8,3,1,4,9,8};
+        int array[] = {2,5,7,8,3,1,4,9,8,1,12,43,3};
         selectionSort(array);
 
         System.out.println("Selection Sort");
         for(int i : array) {
-            System.out.print(i + " ");
+            System.out.print(i + ", ");
         }
 
     }

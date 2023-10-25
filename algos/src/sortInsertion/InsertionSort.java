@@ -12,7 +12,7 @@ public class InsertionSort {
 
         System.out.println("Insertion Sort");
         for(int i : array) {
-            System.out.print(i + " ");
+            System.out.print(i + ", ");
         }
     }
 
