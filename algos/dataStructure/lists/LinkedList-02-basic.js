@@ -110,6 +110,32 @@ class LinkedList {
         this.size--;
     }
 
+    // Remove last index
+    removeLast() {
+        if (this.size === 0) {
+            return;
+        }
+        let current = this.head;
+        let previous;
+
+        while (current.next !== null) {
+            previous = current;
+            current = current.next;
+        }
+        previous.next = current.next;
+        this.size--;
+    }
+
+    // Remove first index
+    removeFirst() {
+        if (this.size === 0) {
+            return;
+        }
+        let current = this.head;
+        this.head = current.next;
+        this.size--;
+    }
+
     // Clear list
     clearList() {
         this.head = null;
@@ -138,12 +164,33 @@ ll.insertAt(600, 0);
 
 ll.printListData();
 console.log("-------");
+
 ll.getAt(1);
 ll.getAt(-1);
 console.log("-------");
+console.log("before remove index ...");
+ll.printListData();
+console.log("remove at index..");
 ll.removeAt(1);
+console.log("current list element");
 ll.printListData();
 console.log("-------");
+
+console.log(ll.size);
+console.log("-------");
+console.log("before remove first index");
+ll.printListData();
+console.log("-------");
+console.log("after remove first index");
+ll.removeFirst();
+ll.printListData();
+console.log("-------");
+console.log("remove last index");
+ll.removeLast();
+ll.printListData();
+
+console.log("-------");
+console.log("Clear list");
 ll.clearList();
 ll.printListData();
 console.log(ll.size);
