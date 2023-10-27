@@ -86,8 +86,35 @@ class LinkedList {
     }
 
     // Remove at index
+    removeAt(index) {
+        if (index < 0 || index > this.size) {
+            console.log("index out of bound..");
+            return;
+        }
+
+        let current = this.head;
+        let previous;
+        let count = 0;
+
+        // remove first
+        if (index === 0) {
+            this.head = current.next;
+        } else {
+            while (count < index) {
+                count++;
+                previous = current;
+                current = current.next;
+            }
+            previous.next = current.next;
+        }
+        this.size--;
+    }
 
     // Clear list
+    clearList() {
+        this.head = null;
+        this.size = 0;
+    }
 
     // Print list data
     printListData() {
@@ -113,3 +140,10 @@ ll.printListData();
 console.log("-------");
 ll.getAt(1);
 ll.getAt(-1);
+console.log("-------");
+ll.removeAt(1);
+ll.printListData();
+console.log("-------");
+ll.clearList();
+ll.printListData();
+console.log(ll.size);
