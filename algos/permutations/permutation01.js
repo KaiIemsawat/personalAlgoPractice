@@ -1,4 +1,4 @@
-let nums = [1, 2, 3, 4];
+let numArr = [1, 2, 3];
 
 const permute = (numArr) => {
     const output = [];
@@ -31,4 +31,4 @@ const permute = (numArr) => {
     return output;
 };
 
-console.log(permute(nums));
+console.log(permute(numArr));
