@@ -14,5 +14,7 @@ public class Main {
         tree.insert(new Node(-3));
 
         tree.display();
+
+        System.out.println(tree.search(1));
     }
 }
