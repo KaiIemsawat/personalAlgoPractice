@@ -61,18 +61,54 @@ public class BinarySearchTree {
     }
 
     public void remove(int data) {
-
+        if (search(data)) {
+            removeHelper(root, data);
+        }
+        else {
+            System.out.println(data + " could not be found");
+        }
     }
 
+    /* REMOVE NODE */
     private Node removeHelper(Node root, int data) {
-        return null;
+        if (root == null) {
+            return root;
+        }
+        else if (data < root.data) {
+            root.left = removeHelper(root.left, data);
+        }
+        else if (data > root.data) {
+            root.right = removeHelper(root.right, data);
+        }
+        else { // node found
+            if (root.left == null && root.right == null) {
+                root = null;
+            }
+            else if (root.right != null) { // find a successor to replace this node
+                root.data = successor(root);
+                root.right = removeHelper(root.right, root.data);
+            }
+            else { // find a predecessor to replace this node
+                root.data = predecessor(root);
+                root.left = removeHelper(root.left, root.data);
+            }
+        }
+        return root;
     }
 
     private int successor(Node root) {
-        return 0;
+        root = root.right;
+        while(root.left != null) {
+            root = root.left;
+        }
+        return root.data;
     }
 
     private int predecessor(Node root) {
-        return 0;
+        root = root.left;
+        while(root.right != null) {
+            root = root.right;
+        }
+        return root.data;
     }
 }
