@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main{
+public class Hashtable_Algo{
 
     public static void main(String args[]) {
         /* Case of Integer */
