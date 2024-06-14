@@ -1,3 +1,4 @@
+// Helper function
 const swap = (matrix, i, j, k, l) => {
     const temp = matrix[k][l];
     matrix[k][l] = matrix[i][j];
