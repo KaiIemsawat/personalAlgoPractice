@@ -6,9 +6,9 @@ public class Solution {
 
         for (int i = 0; i < n; i++) {
             for (int j = i; j < n; j++) {
-                int temp = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = temp;
+                int temp = matrix[i][j]; // 2 // 3 // 5 // 6
+                matrix[i][j] = matrix[j][i]; // 2 -> 4 // 3 -> 7 // 5 -> 5 // 6 -> 8
+                matrix[j][i] = temp; // 4 -> 2 // 7 -> 3 // 5 -> 5 // 8 -> 6
             }
         }
 
@@ -39,5 +39,6 @@ public class Solution {
  * 7 4 1
  * 8 5 2
  * 9 6 3
- * 
+ *
+ * Linear
  */

@@ -64,3 +64,12 @@ var numIsland = function (grid) {
 
     return islandCount;
 };
+
+const inputArr = [
+    ["1", "0", "1", "1", "1", "0"],
+    ["1", "1", "1", "1", "0", "0"],
+    ["0", "1", "0", "0", "1", "0"],
+    ["1", "1", "1", "1", "1", "0"],
+];
+
+console.log(numIsland(inputArr));
