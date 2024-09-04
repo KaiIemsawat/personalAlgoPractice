@@ -6,6 +6,7 @@ public class PhoneBuilder {
     private String processor;
     private double screenSize;
     private int battery;
+    private double osVersion;
 
     /* Only setters */
     public PhoneBuilder setOs(String os) {
@@ -29,7 +30,12 @@ public class PhoneBuilder {
         return this;
     }
 
+    public PhoneBuilder setOsVersion(double osVersion) {
+        this.osVersion = osVersion;
+        return this;
+    }
+
     public Phone getPhone () {
-        return new Phone(os, ram, processor,screenSize, battery);
+        return new Phone(os, ram, processor,screenSize, battery, osVersion);
     }
 }
