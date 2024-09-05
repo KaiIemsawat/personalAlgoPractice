@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/dataStructure/javaDataSructure" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/designPatterns" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/dataStructure/JavaLinearSearch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dataStructure/Search" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
