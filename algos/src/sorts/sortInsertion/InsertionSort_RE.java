@@ -16,7 +16,6 @@ public class InsertionSort_RE {
         }
     }
     //-3, 0, 1, 2, 4, 5, 7, 8, 8, 9, 12, 12, 24,
-    //-3, 0, 1, 2, 4, 5, 7, 8, 8, 9, 12, 12, 24,
     private static void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int tempValue = array[i];
