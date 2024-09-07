@@ -2,76 +2,79 @@ package sorts.sortMerge;
 
 public class MergeSort_RE {
     public static void main(String[] args) {
-//        recursively divide array to 2, sort, re-combine // divide and conquer
-//        Quadratic time O(n log(n))
-//        Linear Space O(n)
+        // recursively divide array to 2, sort, re-combine
+        // divide and conquer
+        // Quadratic time O(n log(n))
+        // Linear Space O(n)
 
-        int array[] = {15,7,2,-3,82,4,9,5,2,11,-5};
-
+        int array[] = { 5, 7, 2, -3, 82, 4, 9, 11, 2, -5 };
+        //              -5, -3, 2, 2, 4, 5, 7, 9, 11, 82,
         mergeSort(array);
-
         System.out.println("Merge Sort");
         for (int i : array) {
             System.out.print(i + ", ");
         }
     }
 
-    private static void mergeSort(int[] array) {
-        int ArrLength = array.length;
+    private static void mergeSort(int[] inputArr) {
+        int ArrLength = inputArr.length;
         if (ArrLength <= 1) return;
 
-        int middleIndex = ArrLength/2;
+        // Initialize middle index, and left and right arrays(empty for now)
+        int middleIndex = ArrLength / 2;
         int[] leftArray = new int[middleIndex];
         int[] rightArray = new int[ArrLength - middleIndex];
 
-        int leftArrIndex = 0;
-        int rightArrIndex = 0;
-
-        for (;leftArrIndex < ArrLength; leftArrIndex++) {
-            if (leftArrIndex < middleIndex) {
-                leftArray[leftArrIndex] = array[leftArrIndex];
-            }
-            else {
-                rightArray[rightArrIndex] = array[leftArrIndex];
-                rightArrIndex++;
+        // Assign values from main array to left and right array
+        int lIndex = 0, rIndex = 0;
+        for (; lIndex < ArrLength; lIndex++) {
+            if (lIndex < middleIndex) {
+                leftArray[lIndex] = inputArr[lIndex];
+            } else {
+                rightArray[rIndex] = inputArr[lIndex];
+                rIndex++;
             }
         }
 
+        // Recursively splitting until array size is one and stop.
+        // From 'if (ArrLength <= 1) return;' above
         mergeSort(leftArray);
+        // Once the array size is '1' on left side, the new recursion will begin for the right side.
         mergeSort(rightArray);
+        // Once the array size is '1' on both sides, the recursion (on that level) is finish.
+        // Then merge() will be called (for that level)
 
-        merge(leftArray, rightArray, array);
-
+        // Note : this will also be call on EACH recursion. From, combine single element into 2 elements array and upward
+        merge(leftArray, rightArray, inputArr);
+        // merge() will be call on every level on each side
     }
 
-    private static void merge(int[] leftArr, int[] rightArr, int[] arr) {
-        int leftArrSize = arr.length / 2;
-        int rightArrSize = arr.length - leftArrSize;
-        int i = 0, leftIndex = 0, rightIndex = 0;
+    private static void merge(int[] leftArr, int[] rightArr, int[] inputArr) {
+        int leftArrSize = leftArr.length;
+        int rightArrSize = rightArr.length;
+        int mainArrIndex = 0, leftIndex = 0, rightIndex = 0;
 
-//        Check condition for merging
+        // Check condition for merging
         while (leftIndex < leftArrSize && rightIndex < rightArrSize) {
             if (leftArr[leftIndex] < rightArr[rightIndex]) {
-                arr[i] = leftArr[leftIndex];
+                inputArr[mainArrIndex] = leftArr[leftIndex];
                 leftIndex++;
-            }
-            else {
-                arr[i] = rightArr[rightIndex];
+            } else {
+                inputArr[mainArrIndex] = rightArr[rightIndex];
                 rightIndex++;
             }
-            i++;
+            mainArrIndex++;
         }
         while (leftIndex < leftArrSize) {
-            arr[i] = leftArr[leftIndex];
+            inputArr[mainArrIndex] = leftArr[leftIndex];
             leftIndex++;
-            i++;
+            mainArrIndex++;
         }
         while (rightIndex < rightArrSize) {
-            arr[i] = rightArr[rightIndex];
+            inputArr[mainArrIndex] = rightArr[rightIndex];
             rightIndex++;
-            i++;
+            mainArrIndex++;
         }
     }
-
 
 }

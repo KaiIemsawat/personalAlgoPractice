@@ -27,8 +27,6 @@ public class QuickSort_RE {
         int pivot = partition(array, start, end);
         quickSort(array, start, pivot - 1); // work on the left side
         quickSort(array, pivot + 1, end); // work on the right side
-
-
     }
 
     private static int partition(int[] array, int start, int end) {
