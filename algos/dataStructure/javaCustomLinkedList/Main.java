@@ -13,6 +13,8 @@ public class Main {
         System.out.println("--");
         System.out.println(list.deleteLast());
         System.out.println("--");
+        System.out.println(list.deleteAt(1));
+        System.out.println("--");
 
         list.display();
     }
