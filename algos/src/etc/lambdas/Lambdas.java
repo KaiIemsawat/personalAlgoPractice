@@ -37,12 +37,30 @@ public class Lambdas {
         printThing(lambdaPrintable1);
         printThing(lambdaPrintable2);
 
+        Print2 lambdaPrint2_1 = (str) -> {
+            System.out.println("from print1 : " + str);
+            return "return from print1 : " + str;
+        };
+
+        Print2 lambdaPrint2_2 = (str) -> "from print2 : " + str;
+
+        printWithReturn(lambdaPrint2_1);
+        printWithReturn(lambdaPrint2_2);
+        System.out.println(printWithReturn(lambdaPrint2_1));
 
 
     }
+
+
 
     static void printThing(Printable thing) {
 //        thing.print();
         thing.print("hi, ", " !");
     }
+
+    static String printWithReturn(Print2 thing) {
+        thing.print2("woof");
+        return "woooofffffff....";
+    };
+
 }

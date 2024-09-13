@@ -1,6 +1,6 @@
 package etc.lambdas;
 
-public class Cat implements Printable{
+public class Cat implements Printable, Print2{
     public String name;
     public int age;
 
@@ -14,4 +14,9 @@ public class Cat implements Printable{
     }
 
 
+    @Override
+    public String print2(String str) {
+        System.out.println("from print2 : " + str);
+        return str;
+    }
 }
