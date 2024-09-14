@@ -29,6 +29,7 @@ public class Main {
         d_list.insertFirst(11);
         d_list.insertFirst(1);
         d_list.insertLast(999);
+        d_list.insertAfter(5, 88);
 
         d_list.display();
         System.out.println();
