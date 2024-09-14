@@ -1,10 +1,10 @@
-public class LL {
+public class SinglyLL {
 
     private Node head;
     private Node tail;
     private int size;
     
-    public LL() {
+    public SinglyLL() {
         this.size = 0;
     }
 

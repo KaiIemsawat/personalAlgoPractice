@@ -1,21 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        LL list = new LL();
+        SinglyLL s_list = new SinglyLL();
 
-        list.insertFirst(4);
-        list.insertFirst(3);
-        list.insertFirst(7);
-        list.insertFirst(21);
-        list.insertLast(99);
-        list.insert(234, 3);
+        s_list.insertFirst(4);
+        s_list.insertFirst(3);
+        s_list.insertFirst(7);
+        s_list.insertFirst(21);
+        s_list.insertLast(99);
+        s_list.insert(234, 3);
 
-        System.out.println(list.deleteFirst());
+        System.out.println(s_list.deleteFirst());
         System.out.println("--");
-        System.out.println(list.deleteLast());
+        System.out.println(s_list.deleteLast());
         System.out.println("--");
-        System.out.println(list.deleteAt(1));
+        System.out.println(s_list.deleteAt(1));
         System.out.println("--");
 
-        list.display();
+        s_list.display();
     }
 }
