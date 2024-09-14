@@ -35,8 +35,11 @@ public class Main {
         d_list.display();
         System.out.println();
 
-        d_list.deleteFirst();
+        System.out.println(d_list.deleteFirst());
         d_list.display();
+        System.out.println();
 
+        System.out.println(d_list.deleteLast());
+        d_list.display();
     }
 }

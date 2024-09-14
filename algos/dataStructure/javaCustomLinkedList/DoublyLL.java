@@ -108,6 +108,19 @@ public class DoublyLL {
         return val;
     }
 
+    public int deleteLast() {
+        if (size <= 1) {
+            return deleteFirst();
+        }
+
+        Node secondFromLast = getNodeByIndex(size - 2);
+        int val = getNodeByIndex(size-1).val;
+        tail = secondFromLast;
+        tail.next = null;
+
+        return val;
+    }
+
 
     public void display() {
         Node node = head;
