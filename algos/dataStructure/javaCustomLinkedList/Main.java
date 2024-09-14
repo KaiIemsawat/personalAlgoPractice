@@ -1,21 +1,33 @@
 public class Main {
     public static void main(String[] args) {
-        SinglyLL s_list = new SinglyLL();
+//        SinglyLL s_list = new SinglyLL();
+//
+//        s_list.insertFirst(4);
+//        s_list.insertFirst(3);
+//        s_list.insertFirst(7);
+//        s_list.insertFirst(21);
+//        s_list.insertLast(99);
+//        s_list.insert(234, 3);
+//
+//        System.out.println(s_list.deleteFirst());
+//        System.out.println("--");
+//        System.out.println(s_list.deleteLast());
+//        System.out.println("--");
+//        System.out.println(s_list.deleteAt(1));
+//        System.out.println("--");
+//
+//        s_list.display();
 
-        s_list.insertFirst(4);
-        s_list.insertFirst(3);
-        s_list.insertFirst(7);
-        s_list.insertFirst(21);
-        s_list.insertLast(99);
-        s_list.insert(234, 3);
 
-        System.out.println(s_list.deleteFirst());
-        System.out.println("--");
-        System.out.println(s_list.deleteLast());
-        System.out.println("--");
-        System.out.println(s_list.deleteAt(1));
-        System.out.println("--");
+        DoublyLL d_list = new DoublyLL();
 
-        s_list.display();
+        d_list.insertFirst(3);
+        d_list.insertFirst(5);
+        d_list.insertFirst(7);
+        d_list.insertFirst(9);
+        d_list.insertFirst(11);
+        d_list.insertFirst(1);
+
+        d_list.display();
     }
 }

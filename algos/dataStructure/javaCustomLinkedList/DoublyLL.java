@@ -1,6 +1,6 @@
 public class DoublyLL {
 
-    Node head;
+    private Node head;
 
     public void insertFirst(int val) {
         Node node = new Node(val);
@@ -11,6 +11,26 @@ public class DoublyLL {
             head.prev = node;
         }
         head = node;
+    }
+
+
+
+    public void display() {
+        Node node = head;
+        Node last = null;
+        while (node != null) {
+            System.out.print(node.val + " -> ");
+            last = node;
+            node = node.next;
+        }
+        System.out.println("END");
+        System.out.println("PRINT IN REVERSE");
+
+        while (last != null) {
+            System.out.print(last.val + " -> ");
+            last = last.prev;
+        }
+        System.out.println("START");
     }
 
 
