@@ -67,6 +67,34 @@ public class DoublyLL {
         }
     }
 
+    public Node getNodeByIndex(int index) {
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
+    public void insertAt(int index, int val) {
+        if (index == 0) {
+            insertFirst(val);
+            return;
+        }
+
+        Node currentNodeAtIndex = getNodeByIndex(index);
+
+        if (currentNodeAtIndex == null) {
+            System.out.println("Does not exist");
+            return;
+        }
+
+        Node node = new Node(val);
+        node.next = currentNodeAtIndex;
+        node.prev = currentNodeAtIndex.prev;
+        currentNodeAtIndex.prev = node;
+        node.prev.next = node;
+    }
+
 
     public void display() {
         Node node = head;
