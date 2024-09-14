@@ -9,6 +9,7 @@ public class Main {
 //        s_list.insertLast(99);
 //        s_list.insert(234, 3);
 //
+//        s_list.display();
 //        System.out.println(s_list.deleteFirst());
 //        System.out.println("--");
 //        System.out.println(s_list.deleteLast());
@@ -27,7 +28,9 @@ public class Main {
         d_list.insertFirst(9);
         d_list.insertFirst(11);
         d_list.insertFirst(1);
+        d_list.insertLast(999);
 
         d_list.display();
+        System.out.println();
     }
 }

@@ -1,6 +1,8 @@
 public class DoublyLL {
 
     private Node head;
+    private Node tail;
+    private int size;
 
     public void insertFirst(int val) {
         Node node = new Node(val);
@@ -11,8 +13,31 @@ public class DoublyLL {
             head.prev = node;
         }
         head = node;
+        size++;
     }
 
+    public void insertLast(int val) {
+        Node node = new Node(val);
+        Node last = head;
+
+        node.next = null;
+
+        // edge case when list size = 0
+        if (head == null) {
+            node.prev = null;
+            head = node;
+            return;
+        }
+
+        // iterate through list until the last.next = null
+        while (last.next != null) {
+            last = last.next;
+        }
+        last.next = node;
+        node.prev = last;
+
+        size++;
+    }
 
 
     public void display() {

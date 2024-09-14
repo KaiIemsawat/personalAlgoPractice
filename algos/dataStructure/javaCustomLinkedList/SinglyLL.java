@@ -25,6 +25,7 @@ public class SinglyLL {
             return;
         }
 
+        // If the next node from tail is not null, assign the next node with new node value
         Node node = new Node(val);
         tail.next = node;
         tail = node;
