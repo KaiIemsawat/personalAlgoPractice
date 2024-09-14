@@ -65,6 +65,7 @@ public class DoublyLL {
         if (node.next != null) {
             node.next.prev = node;
         }
+        size++;
     }
 
     public Node getNodeByIndex(int index) {
@@ -93,6 +94,18 @@ public class DoublyLL {
         node.prev = currentNodeAtIndex.prev;
         currentNodeAtIndex.prev = node;
         node.prev.next = node;
+        size++;
+    }
+
+    public int deleteFirst() {
+        int val = head.val;
+        head = head.next;
+        head.prev = null;
+        if (head == null) {
+            tail = null;
+        }
+        size--;
+        return val;
     }
 
 

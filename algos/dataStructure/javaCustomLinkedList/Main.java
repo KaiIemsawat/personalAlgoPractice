@@ -30,10 +30,13 @@ public class Main {
         d_list.insertFirst(1);
         d_list.insertLast(999);
         d_list.insertAfter(5, 88);
-        d_list.insertAt(0,77);
+        d_list.insertAt(1,77);
 
         d_list.display();
         System.out.println();
-        System.out.println(d_list.getNodeByIndex(2));
+
+        d_list.deleteFirst();
+        d_list.display();
+
     }
 }
