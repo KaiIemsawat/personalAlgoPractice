@@ -1,4 +1,4 @@
-package algos.leetCode.island;
+package island;
 
 public class Solution {
     public int numIslands(char[][] grid) {

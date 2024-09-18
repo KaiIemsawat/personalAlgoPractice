@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/designPatterns" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dataStructure/Search" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dataStructure/javaCustomLinkedList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/leetCode" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
