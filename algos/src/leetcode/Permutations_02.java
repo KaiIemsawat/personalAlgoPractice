@@ -17,21 +17,28 @@ public class Permutations_02 {
     }
 
     private static void permutation(
-            int[] nums, boolean[] used, ArrayList<Integer> perms, List<List<Integer>> result
+            int[] nums, // Take base input array (original)
+            boolean[] used, // Check if the index was used
+            ArrayList<Integer> innerArray, // The smaller array (inner dimension array).
+            List<List<Integer>> result
     ) {
-        if (perms.size() == nums.length) {
-            result.add(new ArrayList<>(perms));
+
+        // Once innerArray has the same size with original input array,
+        // add innerArray to result array
+        if (innerArray.size() == nums.length) {
+            result.add(new ArrayList<>(innerArray));
             return;
         }
 
+        // Iterate through all elements based on 'nums'
         for (int i = 0; i< nums.length; i++) {
             if (used[i]) continue;
 
             used[i] = true;
-            perms.add(nums[i]);
-            permutation(nums, used, perms, result);
+            innerArray.add(nums[i]);
+            permutation(nums, used, innerArray, result);
             used[i] = false;
-            perms.remove(perms.size() - 1);
+            innerArray.remove(innerArray.size() - 1);
         }
     }
 }
