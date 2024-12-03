@@ -16,15 +16,27 @@ public class InsertionSort_RE {
         }
     }
     //-3, 0, 1, 2, 4, 5, 7, 8, 8, 9, 12, 12, 24,
-    private static void insertionSort(int[] array) {
-        for (int i = 1; i < array.length; i++) {
-            int tempValue = array[i];
+//    private static void insertionSort(int[] array) {
+//        for (int i = 1; i < array.length; i++) {
+//            int tempValue = array[i];
+//            int j = i - 1;
+//            while (j >= 0 && array[j] > tempValue) {
+//                array[j+1] = array[j];
+//                j--;
+//            }
+//            array[j+1] = tempValue;
+//        }
+//    }
+
+    private static void insertionSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int tempValue = arr[i];
             int j = i - 1;
-            while (j >= 0 && array[j] > tempValue) {
-                array[j+1] = array[j];
+            while (j >= 0 && arr[j] > tempValue) {
+                arr[j + 1] = arr[j];
                 j--;
             }
-            array[j+1] = tempValue;
+            arr[j+1] = tempValue;
         }
     }
 

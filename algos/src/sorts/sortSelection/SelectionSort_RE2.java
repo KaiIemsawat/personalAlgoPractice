@@ -19,7 +19,7 @@ public class SelectionSort_RE2 {
     private static void selectionSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int temMinIndex = i;
-            for (int j = i+1; j < array.length - 1; j++) {
+            for (int j = i+1; j < array.length; j++) {
                 if (array[j] < array[temMinIndex]) {
                     temMinIndex = j;
                 }
