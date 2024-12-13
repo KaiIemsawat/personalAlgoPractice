@@ -7,7 +7,7 @@ public class InsertionSort_RE {
 //        large data set = BAD
 //        Less steps than Bubble Sort
 
-        int array[] = {2,5,7,12,8,-3,1,4,9,8,0,12,24};
+        int array[] = {2,5,7,12,8,-3,1,4,9,8,0,12,24,-2,-5,17};
         insertionSort(array);
 
         System.out.println("Insertion Sort");
@@ -29,7 +29,7 @@ public class InsertionSort_RE {
 //    }
 
     private static void insertionSort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             int tempValue = arr[i];
             int j = i - 1;
             while (j >= 0 && arr[j] > tempValue) {
