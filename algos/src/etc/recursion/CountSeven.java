@@ -1,6 +1,16 @@
 package etc.recursion;
 
 public class CountSeven {
+
+
+/*
+    Given a non-negative int n, return the count of the occurrences of 7 as a digit,
+    so for example 717 yields 2. (no loops).
+
+    count7(717) → 2
+    count7(7) → 1
+    count7(123) → 0
+ */
     public static void main(String[] args) {
         System.out.println(count7(77323717));
     }
