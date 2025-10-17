@@ -16,6 +16,9 @@ public class SingletonObj {
     // ----
 
     /* Lazy initialization*/
+//    1. create obj instance
+//    2. create private no arg constructor
+//    3. create getInstance.
     public static SingletonObj objInstance = null;
 
     private SingletonObj() {}
