@@ -12,16 +12,28 @@ public class QuickSort_RE {
 
 //        Space complexity : O(log(n)) due to recursion
 
-        int array[] = {5,5,7,8,3,-3,12,1,4};
-        // -3, 1, 3, 4, 5, 5, 7, 8, 12,
-        // Quick Sort requires 3 argument (the array, start (index 0), end (last index))
-        quickSort(array, 0, array.length - 1);
+        int[] array = {5,5,7,8,3,-3,12,1,4};
+        // Expect -3, 1, 3, 4, 5, 5, 7, 8, 12,
+        quickSort(array);
 
         System.out.println("Quick Sort");
         for (int i : array) System.out.print(i + ", ");
     }
 
+    private static void quickSort(int[] array) {
+        int start = 0;
+        int end = array.length - 1;
+
+        // Quick Sort actually requires 3 argument (the array, start (index 0), end (last index))
+        quickSort(array, start, end);
+    }
+
     private static void quickSort(int[] array, int start, int end) {
+        //  Inside the quickSort method, the array inside that method points to the same memory as the array in main.
+        //  Any changes you make to array[i] or swap elements directly modify the original array.
+        //  This is why quickSort can return void — it doesn’t need to return a new array;
+        //  the original array gets sorted in place.
+
         // For recursion break
         if (end <= start) return;;
 
